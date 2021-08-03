@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+*{
+  box-sizing:border-box;
+}
+body{
+  font-family:Montserrat, sans-serif;
+  background-color:#fcf0cc;
+  margin:0;
+}
+nav{
+  background-color:#861657;/*#A64253;*/
+  color:#fff;
+  display:flex;
+  justify-content:flex-end;
+  padding:15px;
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  z-index:100;
+}
+nav a {
+  color:#fff;
+  margin-left:20px;
+  text-decoration:none;
+  position:relative;
+}
+nav a::after{
+  content:'';
+ /* border-bottom: 3px solid #fff;*/
+  position:absolute;
+  top:0;
+  left:0;
+  transform:translateY(10px);
+  transition:transform 0.3s ease;
+  opacity:0;
+  width:100px;
+  height:100px;
+}
+nav a:hover {
+  border-bottom: 3px solid #fff;
+}
+nav a:hover::after{
+  opacity:1;
+   transform:translateY(0);
+}
+header{
+   background-image: url("https://www.codingdojo.com/blog/wp-content/uploads/Screen-Shot-2020-01-08-at-3.44.24-PM.png");
+  background-size:cover;
+ background-position:center center;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#fff;
+  flex-direction:column;
+  height:100vh;
+  position: relative;
+}
+header::after{
+  content:'';
+  background-color:#000;
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  opacity:0.8;
+}
+header *{
+ position:relative;
+  z-index:1; 
+}
+header h1{
+  font-size:60px;
+  margin-bottom:0px;
+  margin-top:0;
+}
+header p{
+  font-size:30px;
+  margin:0px;
+  
+}
+section{
+  text-align:center;
+  padding:40px;
+  
+}
+section h2 {
+  margin:0;
+}
+section p{
+  margin-top:0;
+}
+.project-tile {
+  max-width:250px;
+  margin:10px;
+  text-decoration:none;
+    transition:transform 0.3s ease;
+}
+.project-tile:hover{
+  transform: scale(1.05);
+ 
+}
+.project-tile img{
+  max-width:100%;
+}
+.project-tile p{
+  font-size:20px;
+  margin-top:10px;
+  color:#000;
+}
+.project-tile-container{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-wrap:wrap;
+  max-width:810px;
+  margin:20px auto 0;
+}
+.bg-pinkish{
+  background-color:#A64253;
+  color:#fff;
+}
+.social-ul{
+  display:flex;
+  list-style-type:none;
+  justify-content:center;
+  flex-wrap:wrap;
+  padding:0;
+  margin:0;
+}
+.social-ul a {
+   border-radius:50%;
+  border: 1px solid #fff;
+  width:50px;
+  height:50px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  text-decoration:none;
+  color:#fff;
+  font-size:23px;
+  margin:5px 10px;
+}
+@media  (max-width: 440px) {
+  section{
+    padding:20px;
+}
+}
+footer{
+  background-color:#861657;/*#A64253;*/
+  color:#fff;
+  padding:10px;
+  text-align:center;
+}
+footer .fa-heart{
+  color:red;
+}
